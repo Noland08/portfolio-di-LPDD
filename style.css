@@ -1182,4 +1182,20 @@ p { color: #b8bec5; max-width: 680px; }
   .navbar {
     width: calc(100% - 40px);
   }
+
+}
+
+/* For Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* For IE & old Edge */
+* {
+  -ms-overflow-style: none;
 }
