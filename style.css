@@ -1182,20 +1182,43 @@ p { color: #b8bec5; max-width: 680px; }
   .navbar {
     width: calc(100% - 40px);
   }
-
 }
 
-/* For Chrome, Edge, Safari */
-::-webkit-scrollbar {
-  display: none;
+.class-message {
+  padding: 120px 8%;
+  background: rgba(18, 2, 2, 0.02);
+  backdrop-filter: blur(6px);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* For Firefox */
-* {
-  scrollbar-width: none;
+.class-message-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-/* For IE & old Edge */
-* {
-  -ms-overflow-style: none;
+.class-message-content h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.class-message-content p {
+  font-size: 1.25rem;
+  color: #d1f7e3;
+  line-height: 1.9;
+  margin-bottom: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.class-message-content .signature {
+  margin-top: 35px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ff8232;
+  letter-spacing: 0.5px;
 }
