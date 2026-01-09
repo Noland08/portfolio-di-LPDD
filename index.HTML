@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lê Phước Duy Đức —  Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/img/LPDD.ico">
+    <link rel="stylesheet" href="style.css" />
+
+
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading">
+        <span id="word">Loading</span>
+    </div>
+
+    <!-- ADVANCED BACKGROUND LAYERS -->
+    <div class="bg-grid"></div>
+    <div class="bg-noise"></div>
+    <div class="bg-orbs"></div>
+
+    <!-- FLOATING EQUATIONS (already yours) -->
+    <div class="equationsBg">
+        <!-- equations injected by JS -->
+    </div>
+    <!-- S-shaped Scroll Line (hidden) -->
+    <div class="scroll-line">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#ff8232" />
+                    <stop offset="100%" stop-color="#3296ff" />
+                </linearGradient>
+            </defs>
+
+            <!-- Background path -->
+            <path id="bg-path" d="
+              M 50 0
+              C 2 30, 2 55, 50 60
+              C 98 65, 98 85, 50 100
+            " />
+
+            <!-- Progress path -->
+            <path id="progress-path" class="progress-path" d="
+              M 50 0
+              C 2 30, 2 55, 50 60
+              C 98 65, 98 85, 50 100
+            " />
+        </svg>
+    </div>
+
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-left">LÊ PHƯỚC DUY ĐỨC</div>
+        <ul class="nav-right">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Adventure</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Image Preview -->
+    <div class="image-preview" id="imagePreview">
+        <img id="previewImage" src="" alt="Preview">
+        <div class="preview-label" id="previewLabel"></div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="deco-circle"></div>
+        <div class="deco-circle"></div>
+
+        <div class="hero-content reveal">
+            <span class="label">Portfolio</span>
+            <h1>
+                Lê Phước
+                <span class="accent">Duy Đức</span>
+                <br />
+
+            </h1>
+            <h1 class="subtitle">
+                Designer • Dreamer • IT-2326
+            </h1>
+            <p class="intro">
+                I design and build intelligent robotic systems that blend mechanical precision,
+                smart automation, and practical engineering. Driven by curiosity and discipline,
+                I create solutions that improve real-world performance.
+            </p>
+        </div>
+
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <!-- ABOUT (with sticky effect) -->
+    <section class="about" id="about">
+        <div class="about-sticky">
+            <div class="about-content">
+                <div class="about-left reveal">
+                    <div class="about-image-placeholder">
+                        
+                     <img src="img/me.png" alt="Profile Image">
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Language</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Awards</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Years</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-right reveal">
+                    <span class="label">Introduction</span>
+                    <h2>About Me</h2>
+                    <p style="margin-top: 20px;">
+                        I am a Vietnamese student with strong experience in robotics, informatics,
+                        and mechanical design. My work combines analytical thinking with creativity,
+                        allowing me to solve engineering problems efficiently.
+                    </p>
+                    <p style="margin-top: 20px;">
+                        I'm known for being supportive, sociable, innovative, and highly agile —
+                        strengths confirmed through the Red Bull Wingfinder assessment. I thrive in
+                        collaborative environments and enjoy pushing the boundaries of what's possible
+                        in robotics and automation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+        <div class="skills-content">
+            <div class="section-header reveal">
+                <span class="label">Adventure</span>
+                <h2>My bizzare adventure</h2>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card reveal"
+                data-preview-image="img/10th.png"
+                    data-preview-label="10th">
+                    <div class="skill-icon">10th</div>
+                    <h3>New me</h3>
+                    <p>
+                        When I first stepped into LVC’s territory, I caught a glimpse of a future filled with
+                        possibility.
+                        Something about the atmosphere — the energy, the people, the purpose — told me I was entering a
+                        place that could shape who I become. From that moment, I knew this was the beginning of
+                        something meaningful.
+                    </p>
+                </div>
+
+                <div class="skill-card reveal"
+                data-preview-image="img/11th.png"
+                    data-preview-label="11th">
+                    <div class="skill-icon">11th</div>
+                    <h3>Developing</h3>
+                    <p>
+                        My development in 11th grade was the turning point.
+                        That was the year I started trying to do everything I could — learning more, joining activities,
+                        taking on new responsibilities, and pushing myself beyond my comfort zone. I stopped waiting for
+                        opportunities and began creating them. And from that effort, I grew faster, stronger, and more
+                        confident in what I could achieve.
+                    </p>
+
+                </div>
+                <div class="skill-card reveal"
+                data-preview-image="img/12th.jpg"
+                    data-preview-label="12th">
+                    <div class="skill-icon">12th</div>
+                    <h3>Now</h3>
+                    <p>
+                        And then came the matured me in 12th grade — more focused, more disciplined, and aware of what
+                        truly mattered. I stopped acting on impulse and started making decisions with purpose. I
+                        understood my strengths, accepted my weaknesses, and learned how to improve both. It was the
+                        year I grew not just academically, but mentally and emotionally
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
+        <div class="projects-content">
+            <div class="section-header reveal">
+                <span class="label">Work</span>
+                <h2>Featured Projects</h2>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card reveal"
+                    data-preview-image="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=400"
+                    data-preview-label="FPTUAI&ROBOTIC">
+                    <div class="project-number">PROJECT 01</div>
+                    <h3>Compete in FPTUAI&ROBOTIC Challenge</h3>
+                    <p>FPTU AI & Robotics Challenge 2025 — lifting slide mechanism, harvesting arm, optimization, and
+                        technical notebook.</p>
+                </div>
+
+                <div class="project-card reveal"
+                    data-preview-image="https://images.unsplash.com/photo-1473773508845-188df298d2d1?w=400"
+                    data-preview-label="RMA">
+                    <div class="project-number">PROJECT 02</div>
+                    <h3>RMA River Management Assistant</h3>
+                    <p>Concept design for autonomous river monitoring systems with environmental adaptability.</p>
+                </div>
+
+                <div class="project-card reveal"
+                    data-preview-image="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400"
+                    data-preview-label="HCGEC">
+                    <div class="project-number">PROJECT 03</div>
+                    <h3>HCGEC Writing</h3>
+                    <p>Global writing competition for arguments</p>
+                </div>
+
+                <div class="project-card reveal"
+                    data-preview-image="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400"
+                    data-preview-label="Portfolio Site">
+                    <div class="project-number">PROJECT 04</div>
+                    <h3>Minimalist Portfolio Website</h3>
+                    <p>Clean layout, hover interactions, and intuitive navigation for individual profiles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="achievements">
+        <div class="achievements-content">
+            <div class="section-header reveal">
+                <span class="label">Recognition</span>
+                <h2>Achievements & Awards</h2>
+            </div>
+
+            <ul class="achievement-list">
+                <li class="reveal">FTC Robotics & AI & Robotics Challenge 2025</li>
+                <li class="reveal">Imagine Cup Junior experience</li>
+                <li class="reveal">HCGEC participation</li>
+                <li class="reveal">SARC 2025 proposal — "The Power of Vulnerability"</li>
+                <li class="reveal">Recognized for innovation and team contribution</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CTA & FOOTER -->
+    <section class="cta-footer" id="contact">
+        <div class="cta-layout">
+            <!-- TOP - Main Message -->
+            <div class="cta-left">
+                <h1>
+                    I'm myself! That's all.
+                </h1>
+                <div class="cta-logo">LPDD</div>
+            </div>
+
+            <!-- BOTTOM - Social & Footer -->
+            <div class="cta-right">
+                <!-- Social Links -->
+                <div class="social-bar">
+                    <a href="https://www.instagram.com/noland.lee_/">
+                        Instagram <span>→</span>
+                    </a>
+                    <a href="https://www.facebook.com/ucle.926431">
+                        Facebook <span>→</span>
+                    </a>
+                    <a href="https://x.com/Nolnd21">
+                        X <span>→</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/lê-đức-41bb4a2a3/">
+                        LinkedIn <span>→</span>
+                    </a>
+                </div>
+
+                <!-- Footer Grid -->
+                <div class="footer-grid">
+                    <div>
+                        <h4>Portfolio</h4>
+                        <p>About</p>
+                        <p>Approach</p>
+                        <p>Work</p>
+                        <p>Privacy Policy</p>
+                    </div>
+                    <div>
+                        <h4>Projects</h4>
+                        <p>Agricultural Robotics</p>
+                        <p>River Automation</p>
+                        <p>FTC Robot</p>
+                        <p>Portfolio Site</p>
+                    </div>
+                    <div>
+                        <h4>Contact</h4>
+                        <p>Email: lpduyduc.contact@gmail.com</p>
+                        <p>Phone: +84 704586169</p>
+                        <p>WhatsApp</p>
+                        <p>Working globally</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 Lê Phước Duy Đức. All rights reserved.
+            </div>
+        </div>
+
+    </section>
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
