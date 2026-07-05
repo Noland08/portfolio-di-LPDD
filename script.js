@@ -210,6 +210,45 @@ hoverElements.forEach(element => {
 });
 
 /* =========================
+   ANIMATED COUNTER (SAT SCORE, ETC.)
+========================= */
+function animateCounter(el) {
+  const target = parseInt(el.getAttribute('data-count'), 10);
+  const duration = 1800;
+  const startTime = performance.now();
+
+  function tick(now) {
+    const progress = Math.min((now - startTime) / duration, 1);
+    // Ease-out for a satisfying "settle" near the end
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const value = Math.round(target * eased);
+    el.textContent = value.toLocaleString();
+
+    if (progress < 1) {
+      requestAnimationFrame(tick);
+    } else {
+      el.textContent = target.toLocaleString();
+    }
+  }
+
+  requestAnimationFrame(tick);
+}
+
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !entry.target.dataset.counted) {
+      entry.target.dataset.counted = 'true';
+      animateCounter(entry.target);
+      counterObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.counter[data-count]').forEach(el => {
+  counterObserver.observe(el);
+});
+
+/* =========================
    INTERSECTION OBSERVER
 ========================= */
 const observerOptions = {
